@@ -37,6 +37,8 @@ Pointing the pipeline at a well-maintained open-source stack surfaced, in one af
 | [`.web-qa/seed.spec.ts`](.web-qa/seed.spec.ts) | The human-verified auth pattern (RealWorld keeps its JWT in localStorage — it must be planted via `addInitScript` *before* the app boots) |
 | [`sample-reports/matrix.md`](sample-reports/matrix.md) | The deploy gate: every test × role × viewport (desktop + Pixel 7 emulation), route coverage incl. per-role, flaky markers 🔁, exit-code verdict |
 | [`.web-qa/BUGS.md`](.web-qa/BUGS.md) | Findings ledger — bugs stay here until the app is fixed, they don't get "fixed" in the tests |
+| [`sample-reports/findings/`](sample-reports/findings/) | Evidence for the findings: the mobile comment bug caught on camera (`after-post` — comment missing despite POST 200; `after-reload` — it's there) and the raw axe-core report with all 12 `color-contrast` nodes |
+| [`.web-qa/history.json`](.web-qa/history.json) | The flaky-tracking data behind the 🔁 markers — pass/fail history per test over a 5-run window |
 
 The auth contract is declared, not hardcoded, in [`.web-qa/config.json`](.web-qa/config.json):
 

@@ -1,0 +1,905 @@
+[
+  {
+    "tc": "TC-G1",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+        "tags": [
+          "cat.color",
+          "wcag2aa",
+          "wcag143",
+          "TTv5",
+          "TT13.c",
+          "EN-301-549",
+          "EN-9.1.4.3",
+          "ACT"
+        ],
+        "nodeCount": 59,
+        "nodes": [
+          {
+            "target": [
+              "a[href$=\"editor\"]"
+            ],
+            "html": "<a class=\"nav-link\" href=\"/editor\" data-discover=\"true\">",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.09 (foreground color: #b3b3b3, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "any": [
+              {
+                "id": "color-contrast",
+                "message": "Element has insufficient color contrast of 2.09 (foreground color: #b3b3b3, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "data": {
+                  "fgColor": "#b3b3b3",
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 2.09,
+                  "fontSize": "12.0pt (16px)",
+                  "fontWeight": "normal",
+                  "messageKey": null,
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "a[href$=\"settings\"]"
+            ],
+            "html": "<a class=\"nav-link\" href=\"/settings\" data-discover=\"true\">",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.09 (foreground color: #b3b3b3, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "any": [
+              {
+                "id": "color-contrast",
+                "message": "Element has insufficient color contrast of 2.09 (foreground color: #b3b3b3, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "data": {
+                  "fgColor": "#b3b3b3",
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 2.09,
+                  "fontSize": "12.0pt (16px)",
+                  "fontWeight": "normal",
+                  "messageKey": null,
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".nav-link[href$=\"qa-author\"][data-discover=\"true\"]"
+            ],
+            "html": "<a class=\"nav-link\" href=\"/profile/qa-author\" data-discover=\"true\"><img class=\"user-pic\" alt=\"qa-author\" src=\"https://api.realworld.io/images/smiley-cyrus.jpeg\"> qa-author</a>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.09 (foreground color: #b3b3b3, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "any": [
+              {
+                "id": "color-contrast",
+                "message": "Element has insufficient color contrast of 2.09 (foreground color: #b3b3b3, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "data": {
+                  "fgColor": "#b3b3b3",
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 2.09,
+                  "fontSize": "12.0pt (16px)",
+                  "fontWeight": "normal",
+                  "messageKey": null,
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".container > p"
+            ],
+            "html": "<p>A place to share your knowledge.</p>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.84 (foreground color: #999999, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "any": [
+              {
+                "id": "color-contrast",
+                "message": "Element has insufficient color contrast of 2.84 (foreground color: #999999, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "data": {
+                  "fgColor": "#999999",
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 2.84,
+                  "fontSize": "12.0pt (16px)",
+                  "fontWeight": "normal",
+                  "messageKey": null,
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".nav-pills > .nav-item:nth-child(1) > .nav-link[data-discover=\"true\"]"
+            ],
+            "html": "<a class=\"nav-link\" href=\"/?limit=10&amp;offset=0&amp;feed=personal\" data-discover=\"true\">Your Feed</a>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.32 (foreground color: #aaaaaa, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "any": [
+              {
+                "id": "color-contrast",
+                "message": "Element has insufficient color contrast of 2.32 (foreground color: #aaaaaa, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "data": {
+                  "fgColor": "#aaaaaa",
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 2.32,
+                  "fontSize": "12.0pt (16px)",
+                  "fontWeight": "normal",
+                  "messageKey": null,
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".active[href=\"/?limit=10&offset=0\"][aria-current=\"page\"]"
+            ],
+            "html": "<a class=\"nav-link active\" aria-current=\"page\" href=\"/?limit=10&amp;offset=0\" data-discover=\"true\">Global Feed</a>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.01 (foreground color: #33aa44, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "any": [
+              {
+                "id": "color-contrast",
+                "message": "Element has insufficient color contrast of 3.01 (foreground color: #33aa44, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "data": {
+                  "fgColor": "#33aa44",
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 3.01,
+                  "fontSize": "12.0pt (16px)",
+                  "fontWeight": "normal",
+                  "messageKey": null,
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".article-preview[data-test=\"article-preview\"]:nth-child(2) > .article-meta > .info > .author[href$=\"qa-author\"][data-discover=\"true\"]"
+            ],
+            "html": "<a class=\"author\" href=\"/profile/qa-author\" data-discover=\"true\">qa-author</a>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.01 (foreground color: #33aa44, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "any": [
+              {
+                "id": "color-contrast",
+                "message": "Element has insufficient color contrast of 3.01 (foreground color: #33aa44, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "data": {
+                  "fgColor": "#33aa44",
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 3.01,
+                  "fontSize": "12.0pt (16px)",
+                  "fontWeight": "normal",
+                  "messageKey": null,
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".article-preview[data-test=\"article-preview\"]:nth-child(2) > .article-meta > .info > .date"
+            ],
+            "html": "<span class=\"date\">July 5, 2026</span>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.91 (foreground color: #bbbbbb, background color: #ffffff, font size: 9.6pt (12.8px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "any": [
+              {
+                "id": "color-contrast",
+                "message": "Element has insufficient color contrast of 1.91 (foreground color: #bbbbbb, background color: #ffffff, font size: 9.6pt (12.8px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "data": {
+                  "fgColor": "#bbbbbb",
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 1.91,
+                  "fontSize": "9.6pt (12.8px)",
+                  "fontWeight": "normal",
+                  "messageKey": null,
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".article-preview[data-test=\"article-preview\"]:nth-child(2) > .preview-link[data-discover=\"true\"] > p"
+            ],
+            "html": "<p>A tour of automated QA</p>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.84 (foreground color: #999999, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "any": [
+              {
+                "id": "color-contrast",
+                "message": "Element has insufficient color contrast of 2.84 (foreground color: #999999, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "data": {
+                  "fgColor": "#999999",
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 2.84,
+                  "fontSize": "12.0pt (16px)",
+                  "fontWeight": "normal",
+                  "messageKey": null,
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".article-preview[data-test=\"article-preview\"]:nth-child(2) > .preview-link[data-discover=\"true\"] > span"
+            ],
+            "html": "<span>Read more...</span>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.91 (foreground color: #bbbbbb, background color: #ffffff, font size: 9.6pt (12.8px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "any": [
+              {
+                "id": "color-contrast",
+                "message": "Element has insufficient color contrast of 1.91 (foreground color: #bbbbbb, background color: #ffffff, font size: 9.6pt (12.8px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "data": {
+                  "fgColor": "#bbbbbb",
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 1.91,
+                  "fontSize": "9.6pt (12.8px)",
+                  "fontWeight": "normal",
+                  "messageKey": null,
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".article-preview[data-test=\"article-preview\"]:nth-child(2) > .preview-link[data-discover=\"true\"] > .tag-list > .tag-outline.tag-default.tag-pill:nth-child(1)"
+            ],
+            "html": "<li class=\"tag-default tag-pill tag-outline\">qa</li>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.32 (foreground color: #aaaaaa, background color: #ffffff, font size: 9.6pt (12.8px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "any": [
+              {
+                "id": "color-contrast",
+                "message": "Element has insufficient color contrast of 2.32 (foreground color: #aaaaaa, background color: #ffffff, font size: 9.6pt (12.8px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "data": {
+                  "fgColor": "#aaaaaa",
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 2.32,
+                  "fontSize": "9.6pt (12.8px)",
+                  "fontWeight": "normal",
+                  "messageKey": null,
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".article-preview[data-test=\"article-preview\"]:nth-child(2) > .preview-link[data-discover=\"true\"] > .tag-list > .tag-outline.tag-default.tag-pill:nth-child(2)"
+            ],
+            "html": "<li class=\"tag-default tag-pill tag-outline\">demo</li>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.32 (foreground color: #aaaaaa, background color: #ffffff, font size: 9.6pt (12.8px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "any": [
+              {
+                "id": "color-contrast",
+                "message": "Element has insufficient color contrast of 2.32 (foreground color: #aaaaaa, background color: #ffffff, font size: 9.6pt (12.8px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "data": {
+                  "fgColor": "#aaaaaa",
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 2.32,
+                  "fontSize": "9.6pt (12.8px)",
+                  "fontWeight": "normal",
+                  "messageKey": null,
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null
+                }
+              }
+            ]
+          }
+        ],
+        "path": "/"
+      }
+    ]
+  },
+  {
+    "tc": "TC-G3",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+        "tags": [
+          "cat.color",
+          "wcag2aa",
+          "wcag143",
+          "TTv5",
+          "TT13.c",
+          "EN-301-549",
+          "EN-9.1.4.3",
+          "ACT"
+        ],
+        "nodeCount": 59,
+        "nodes": [
+          {
+            "target": [
+              "a[href$=\"editor\"]"
+            ],
+            "html": "<a class=\"nav-link\" href=\"/editor\" data-discover=\"true\">",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.09 (foreground color: #b3b3b3, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "any": [
+              {
+                "id": "color-contrast",
+                "message": "Element has insufficient color contrast of 2.09 (foreground color: #b3b3b3, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "data": {
+                  "fgColor": "#b3b3b3",
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 2.09,
+                  "fontSize": "12.0pt (16px)",
+                  "fontWeight": "normal",
+                  "messageKey": null,
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "a[href$=\"settings\"]"
+            ],
+            "html": "<a class=\"nav-link\" href=\"/settings\" data-discover=\"true\">",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.09 (foreground color: #b3b3b3, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "any": [
+              {
+                "id": "color-contrast",
+                "message": "Element has insufficient color contrast of 2.09 (foreground color: #b3b3b3, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "data": {
+                  "fgColor": "#b3b3b3",
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 2.09,
+                  "fontSize": "12.0pt (16px)",
+                  "fontWeight": "normal",
+                  "messageKey": null,
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".nav-link[href$=\"qa-author\"][data-discover=\"true\"]"
+            ],
+            "html": "<a class=\"nav-link\" href=\"/profile/qa-author\" data-discover=\"true\"><img class=\"user-pic\" alt=\"qa-author\" src=\"https://api.realworld.io/images/smiley-cyrus.jpeg\"> qa-author</a>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.09 (foreground color: #b3b3b3, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "any": [
+              {
+                "id": "color-contrast",
+                "message": "Element has insufficient color contrast of 2.09 (foreground color: #b3b3b3, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "data": {
+                  "fgColor": "#b3b3b3",
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 2.09,
+                  "fontSize": "12.0pt (16px)",
+                  "fontWeight": "normal",
+                  "messageKey": null,
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".container > p"
+            ],
+            "html": "<p>A place to share your knowledge.</p>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.84 (foreground color: #999999, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "any": [
+              {
+                "id": "color-contrast",
+                "message": "Element has insufficient color contrast of 2.84 (foreground color: #999999, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "data": {
+                  "fgColor": "#999999",
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 2.84,
+                  "fontSize": "12.0pt (16px)",
+                  "fontWeight": "normal",
+                  "messageKey": null,
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".nav-pills > .nav-item:nth-child(1) > .nav-link[data-discover=\"true\"]"
+            ],
+            "html": "<a class=\"nav-link\" href=\"/?limit=10&amp;offset=0&amp;feed=personal\" data-discover=\"true\">Your Feed</a>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.32 (foreground color: #aaaaaa, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "any": [
+              {
+                "id": "color-contrast",
+                "message": "Element has insufficient color contrast of 2.32 (foreground color: #aaaaaa, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "data": {
+                  "fgColor": "#aaaaaa",
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 2.32,
+                  "fontSize": "12.0pt (16px)",
+                  "fontWeight": "normal",
+                  "messageKey": null,
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".active[href=\"/?limit=10&offset=0\"][aria-current=\"page\"]"
+            ],
+            "html": "<a class=\"nav-link active\" aria-current=\"page\" href=\"/?limit=10&amp;offset=0\" data-discover=\"true\">Global Feed</a>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.01 (foreground color: #33aa44, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "any": [
+              {
+                "id": "color-contrast",
+                "message": "Element has insufficient color contrast of 3.01 (foreground color: #33aa44, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "data": {
+                  "fgColor": "#33aa44",
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 3.01,
+                  "fontSize": "12.0pt (16px)",
+                  "fontWeight": "normal",
+                  "messageKey": null,
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".article-preview[data-test=\"article-preview\"]:nth-child(2) > .article-meta > .info > .author[href$=\"qa-author\"][data-discover=\"true\"]"
+            ],
+            "html": "<a class=\"author\" href=\"/profile/qa-author\" data-discover=\"true\">qa-author</a>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.01 (foreground color: #33aa44, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "any": [
+              {
+                "id": "color-contrast",
+                "message": "Element has insufficient color contrast of 3.01 (foreground color: #33aa44, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "data": {
+                  "fgColor": "#33aa44",
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 3.01,
+                  "fontSize": "12.0pt (16px)",
+                  "fontWeight": "normal",
+                  "messageKey": null,
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".article-preview[data-test=\"article-preview\"]:nth-child(2) > .article-meta > .info > .date"
+            ],
+            "html": "<span class=\"date\">July 5, 2026</span>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.91 (foreground color: #bbbbbb, background color: #ffffff, font size: 9.6pt (12.8px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "any": [
+              {
+                "id": "color-contrast",
+                "message": "Element has insufficient color contrast of 1.91 (foreground color: #bbbbbb, background color: #ffffff, font size: 9.6pt (12.8px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "data": {
+                  "fgColor": "#bbbbbb",
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 1.91,
+                  "fontSize": "9.6pt (12.8px)",
+                  "fontWeight": "normal",
+                  "messageKey": null,
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".article-preview[data-test=\"article-preview\"]:nth-child(2) > .preview-link[data-discover=\"true\"] > p"
+            ],
+            "html": "<p>A tour of automated QA</p>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.84 (foreground color: #999999, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "any": [
+              {
+                "id": "color-contrast",
+                "message": "Element has insufficient color contrast of 2.84 (foreground color: #999999, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "data": {
+                  "fgColor": "#999999",
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 2.84,
+                  "fontSize": "12.0pt (16px)",
+                  "fontWeight": "normal",
+                  "messageKey": null,
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".article-preview[data-test=\"article-preview\"]:nth-child(2) > .preview-link[data-discover=\"true\"] > span"
+            ],
+            "html": "<span>Read more...</span>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.91 (foreground color: #bbbbbb, background color: #ffffff, font size: 9.6pt (12.8px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "any": [
+              {
+                "id": "color-contrast",
+                "message": "Element has insufficient color contrast of 1.91 (foreground color: #bbbbbb, background color: #ffffff, font size: 9.6pt (12.8px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "data": {
+                  "fgColor": "#bbbbbb",
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 1.91,
+                  "fontSize": "9.6pt (12.8px)",
+                  "fontWeight": "normal",
+                  "messageKey": null,
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".article-preview[data-test=\"article-preview\"]:nth-child(2) > .preview-link[data-discover=\"true\"] > .tag-list > .tag-outline.tag-default.tag-pill:nth-child(1)"
+            ],
+            "html": "<li class=\"tag-default tag-pill tag-outline\">qa</li>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.32 (foreground color: #aaaaaa, background color: #ffffff, font size: 9.6pt (12.8px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "any": [
+              {
+                "id": "color-contrast",
+                "message": "Element has insufficient color contrast of 2.32 (foreground color: #aaaaaa, background color: #ffffff, font size: 9.6pt (12.8px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "data": {
+                  "fgColor": "#aaaaaa",
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 2.32,
+                  "fontSize": "9.6pt (12.8px)",
+                  "fontWeight": "normal",
+                  "messageKey": null,
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".article-preview[data-test=\"article-preview\"]:nth-child(2) > .preview-link[data-discover=\"true\"] > .tag-list > .tag-outline.tag-default.tag-pill:nth-child(2)"
+            ],
+            "html": "<li class=\"tag-default tag-pill tag-outline\">demo</li>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.32 (foreground color: #aaaaaa, background color: #ffffff, font size: 9.6pt (12.8px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "any": [
+              {
+                "id": "color-contrast",
+                "message": "Element has insufficient color contrast of 2.32 (foreground color: #aaaaaa, background color: #ffffff, font size: 9.6pt (12.8px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "data": {
+                  "fgColor": "#aaaaaa",
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 2.32,
+                  "fontSize": "9.6pt (12.8px)",
+                  "fontWeight": "normal",
+                  "messageKey": null,
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null
+                }
+              }
+            ]
+          }
+        ],
+        "path": "/"
+      }
+    ]
+  },
+  {
+    "tc": "TC-G4",
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.10/color-contrast?application=axeAPI",
+        "tags": [
+          "cat.color",
+          "wcag2aa",
+          "wcag143",
+          "TTv5",
+          "TT13.c",
+          "EN-301-549",
+          "EN-9.1.4.3",
+          "ACT"
+        ],
+        "nodeCount": 59,
+        "nodes": [
+          {
+            "target": [
+              "a[href$=\"editor\"]"
+            ],
+            "html": "<a class=\"nav-link\" href=\"/editor\" data-discover=\"true\">",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.09 (foreground color: #b3b3b3, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "any": [
+              {
+                "id": "color-contrast",
+                "message": "Element has insufficient color contrast of 2.09 (foreground color: #b3b3b3, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "data": {
+                  "fgColor": "#b3b3b3",
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 2.09,
+                  "fontSize": "12.0pt (16px)",
+                  "fontWeight": "normal",
+                  "messageKey": null,
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              "a[href$=\"settings\"]"
+            ],
+            "html": "<a class=\"nav-link\" href=\"/settings\" data-discover=\"true\">",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.09 (foreground color: #b3b3b3, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "any": [
+              {
+                "id": "color-contrast",
+                "message": "Element has insufficient color contrast of 2.09 (foreground color: #b3b3b3, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "data": {
+                  "fgColor": "#b3b3b3",
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 2.09,
+                  "fontSize": "12.0pt (16px)",
+                  "fontWeight": "normal",
+                  "messageKey": null,
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".nav-link[href$=\"qa-author\"][data-discover=\"true\"]"
+            ],
+            "html": "<a class=\"nav-link\" href=\"/profile/qa-author\" data-discover=\"true\"><img class=\"user-pic\" alt=\"qa-author\" src=\"https://api.realworld.io/images/smiley-cyrus.jpeg\"> qa-author</a>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.09 (foreground color: #b3b3b3, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "any": [
+              {
+                "id": "color-contrast",
+                "message": "Element has insufficient color contrast of 2.09 (foreground color: #b3b3b3, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "data": {
+                  "fgColor": "#b3b3b3",
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 2.09,
+                  "fontSize": "12.0pt (16px)",
+                  "fontWeight": "normal",
+                  "messageKey": null,
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".container > p"
+            ],
+            "html": "<p>A place to share your knowledge.</p>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.84 (foreground color: #999999, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "any": [
+              {
+                "id": "color-contrast",
+                "message": "Element has insufficient color contrast of 2.84 (foreground color: #999999, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "data": {
+                  "fgColor": "#999999",
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 2.84,
+                  "fontSize": "12.0pt (16px)",
+                  "fontWeight": "normal",
+                  "messageKey": null,
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".nav-pills > .nav-item:nth-child(1) > .nav-link[data-discover=\"true\"]"
+            ],
+            "html": "<a class=\"nav-link\" href=\"/?limit=10&amp;offset=0&amp;feed=personal\" data-discover=\"true\">Your Feed</a>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.32 (foreground color: #aaaaaa, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "any": [
+              {
+                "id": "color-contrast",
+                "message": "Element has insufficient color contrast of 2.32 (foreground color: #aaaaaa, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "data": {
+                  "fgColor": "#aaaaaa",
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 2.32,
+                  "fontSize": "12.0pt (16px)",
+                  "fontWeight": "normal",
+                  "messageKey": null,
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".active[href=\"/?limit=10&offset=0\"][aria-current=\"page\"]"
+            ],
+            "html": "<a class=\"nav-link active\" aria-current=\"page\" href=\"/?limit=10&amp;offset=0\" data-discover=\"true\">Global Feed</a>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.01 (foreground color: #33aa44, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "any": [
+              {
+                "id": "color-contrast",
+                "message": "Element has insufficient color contrast of 3.01 (foreground color: #33aa44, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "data": {
+                  "fgColor": "#33aa44",
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 3.01,
+                  "fontSize": "12.0pt (16px)",
+                  "fontWeight": "normal",
+                  "messageKey": null,
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".article-preview[data-test=\"article-preview\"]:nth-child(2) > .article-meta > .info > .author[href$=\"qa-author\"][data-discover=\"true\"]"
+            ],
+            "html": "<a class=\"author\" href=\"/profile/qa-author\" data-discover=\"true\">qa-author</a>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 3.01 (foreground color: #33aa44, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "any": [
+              {
+                "id": "color-contrast",
+                "message": "Element has insufficient color contrast of 3.01 (foreground color: #33aa44, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "data": {
+                  "fgColor": "#33aa44",
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 3.01,
+                  "fontSize": "12.0pt (16px)",
+                  "fontWeight": "normal",
+                  "messageKey": null,
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".article-preview[data-test=\"article-preview\"]:nth-child(2) > .article-meta > .info > .date"
+            ],
+            "html": "<span class=\"date\">July 5, 2026</span>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.91 (foreground color: #bbbbbb, background color: #ffffff, font size: 9.6pt (12.8px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "any": [
+              {
+                "id": "color-contrast",
+                "message": "Element has insufficient color contrast of 1.91 (foreground color: #bbbbbb, background color: #ffffff, font size: 9.6pt (12.8px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "data": {
+                  "fgColor": "#bbbbbb",
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 1.91,
+                  "fontSize": "9.6pt (12.8px)",
+                  "fontWeight": "normal",
+                  "messageKey": null,
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".article-preview[data-test=\"article-preview\"]:nth-child(2) > .preview-link[data-discover=\"true\"] > p"
+            ],
+            "html": "<p>A tour of automated QA</p>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.84 (foreground color: #999999, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "any": [
+              {
+                "id": "color-contrast",
+                "message": "Element has insufficient color contrast of 2.84 (foreground color: #999999, background color: #ffffff, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "data": {
+                  "fgColor": "#999999",
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 2.84,
+                  "fontSize": "12.0pt (16px)",
+                  "fontWeight": "normal",
+                  "messageKey": null,
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".article-preview[data-test=\"article-preview\"]:nth-child(2) > .preview-link[data-discover=\"true\"] > span"
+            ],
+            "html": "<span>Read more...</span>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 1.91 (foreground color: #bbbbbb, background color: #ffffff, font size: 9.6pt (12.8px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "any": [
+              {
+                "id": "color-contrast",
+                "message": "Element has insufficient color contrast of 1.91 (foreground color: #bbbbbb, background color: #ffffff, font size: 9.6pt (12.8px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "data": {
+                  "fgColor": "#bbbbbb",
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 1.91,
+                  "fontSize": "9.6pt (12.8px)",
+                  "fontWeight": "normal",
+                  "messageKey": null,
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".article-preview[data-test=\"article-preview\"]:nth-child(2) > .preview-link[data-discover=\"true\"] > .tag-list > .tag-outline.tag-default.tag-pill:nth-child(1)"
+            ],
+            "html": "<li class=\"tag-default tag-pill tag-outline\">qa</li>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.32 (foreground color: #aaaaaa, background color: #ffffff, font size: 9.6pt (12.8px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "any": [
+              {
+                "id": "color-contrast",
+                "message": "Element has insufficient color contrast of 2.32 (foreground color: #aaaaaa, background color: #ffffff, font size: 9.6pt (12.8px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "data": {
+                  "fgColor": "#aaaaaa",
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 2.32,
+                  "fontSize": "9.6pt (12.8px)",
+                  "fontWeight": "normal",
+                  "messageKey": null,
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null
+                }
+              }
+            ]
+          },
+          {
+            "target": [
+              ".article-preview[data-test=\"article-preview\"]:nth-child(2) > .preview-link[data-discover=\"true\"] > .tag-list > .tag-outline.tag-default.tag-pill:nth-child(2)"
+            ],
+            "html": "<li class=\"tag-default tag-pill tag-outline\">demo</li>",
+            "failureSummary": "Fix any of the following:\n  Element has insufficient color contrast of 2.32 (foreground color: #aaaaaa, background color: #ffffff, font size: 9.6pt (12.8px), font weight: normal). Expected contrast ratio of 4.5:1",
+            "any": [
+              {
+                "id": "color-contrast",
+                "message": "Element has insufficient color contrast of 2.32 (foreground color: #aaaaaa, background color: #ffffff, font size: 9.6pt (12.8px), font weight: normal). Expected contrast ratio of 4.5:1",
+                "data": {
+                  "fgColor": "#aaaaaa",
+                  "bgColor": "#ffffff",
+                  "contrastRatio": 2.32,
+                  "fontSize": "9.6pt (12.8px)",
+                  "fontWeight": "normal",
+                  "messageKey": null,
+                  "expectedContrastRatio": "4.5:1",
+                  "shadowColor": null
+                }
+              }
+            ]
+          }
+        ],
+        "path": "/"
+      }
+    ]
+  }
+]

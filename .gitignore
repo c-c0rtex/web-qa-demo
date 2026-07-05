@@ -7,5 +7,3 @@ apps/
 .web-qa/reports/
 .web-qa/test-results/
 .web-qa/fixtures/
-.web-qa/history.json
-.web-qa/package-lock.json
