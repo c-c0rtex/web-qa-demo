@@ -16,11 +16,12 @@ Pointing the pipeline at a well-maintained open-source stack surfaced, in one af
    `ImmatureSignatureError (iat not yet valid)` whenever the clock jitters:
    `jwt.decode()` runs with zero leeway. Symptom: a random "Request failed" error
    boundary on app boot. One `leeway=10` fixes it.
-2. **A comment-rendering bug in the frontend** — a comment posted via the UI gets a
-   `POST … 200` and a successful refetch, but the DOM intermittently never updates
-   (most runs under mobile emulation, occasionally on desktop). After a manual reload
-   the comment is there. The spec that catches it is parked with `test.fixme` +
-   an `APP-BUG` marker — assertions intact, waiting for the app fix.
+2. **A stale-render bug in the frontend that misdirects writes** — after client-side
+   navigation the SPA intermittently keeps rendering the previously-viewed article
+   (wrong title, wrong comments) under the new URL, and the comment form then posts
+   to the *stale* article: the comment lands on the wrong entity. Mobile emulation
+   hits it most runs, desktop occasionally. The specs that catch it are parked with
+   `test.fixme` + an `APP-BUG` marker — assertions intact, waiting for the app fix.
 3. **12 serious `color-contrast` violations** (axe-core) on the article feed — the
    classic green-on-white branding.
 4. An environmental gotcha worth knowing: the backend rate-limits at 100 req/min per
@@ -37,7 +38,7 @@ Pointing the pipeline at a well-maintained open-source stack surfaced, in one af
 | [`.web-qa/seed.spec.ts`](.web-qa/seed.spec.ts) | The human-verified auth pattern (RealWorld keeps its JWT in localStorage — it must be planted via `addInitScript` *before* the app boots) |
 | [`sample-reports/matrix.md`](sample-reports/matrix.md) | The deploy gate: every test × role × viewport (desktop + Pixel 7 emulation), route coverage incl. per-role, flaky markers 🔁, exit-code verdict |
 | [`.web-qa/BUGS.md`](.web-qa/BUGS.md) | Findings ledger — bugs stay here until the app is fixed, they don't get "fixed" in the tests |
-| [`sample-reports/findings/`](sample-reports/findings/) | Evidence for the findings: the mobile comment bug caught on camera (`after-post` — comment missing despite POST 200; `after-reload` — it's there) and the raw axe-core report with all 12 `color-contrast` nodes |
+| [`sample-reports/findings/`](sample-reports/findings/) | Evidence for the findings: the stale-render bug caught on camera (`after-post` — the URL points at a fresh article, but a previously-viewed one is rendered; `after-reload` — the posted comment sits under the WRONG article) and the raw axe-core report with all 12 `color-contrast` nodes |
 | [`.web-qa/history.json`](.web-qa/history.json) | The flaky-tracking data behind the 🔁 markers — pass/fail history per test over a 5-run window |
 
 The auth contract is declared, not hardcoded, in [`.web-qa/config.json`](.web-qa/config.json):

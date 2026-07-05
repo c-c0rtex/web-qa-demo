@@ -3,11 +3,11 @@
   runs with zero leeway, so any clock jitter (WSL2/VM/NTP step) makes the just-created
   `iat` land in the future. Symptom: random "Request failed" error boundary on app boot.
   Fix applied to the demo stand: `leeway=10`.
-- 2026-07-05 [matrix] frontend (mobile emulation only): a comment posted via "Post Comment"
-  is not rendered in the comments list after a successful POST + refetch (API returns it;
-  count stays 0 for 20s). After a manual page reload the comment IS there. Desktop usually renders
-  it immediately but intermittently hits the same gap under repeated runs. Repro: probe spec, Pixel 7.
-- 2026-07-05 [matrix] the mobile rendering gap is broader than comments: after creating
-  an article via the editor (URL navigates to the new slug), the article page heading
-  intermittently never renders under mobile emulation either. Same class: fresh content
-  after a mutation, DOM not updated. Desktop stable across many runs.
+- 2026-07-05 [matrix] frontend: intermittent STALE-PAGE RENDER after client-side
+  navigation (mobile emulation most runs, desktop occasionally). Navigating to a fresh
+  article URL sometimes renders a previously-viewed article instead — wrong title, wrong
+  comments — and the comment form then POSTs to the STALE article's slug: the comment
+  lands on the wrong entity (screenshots: sample-reports/findings/mobile-comment-*.png —
+  after reload the misdirected comment sits under the stale article). Originally observed
+  as 'posted comment not rendered' and 'new article heading not visible'; both are this
+  one bug. Specs TC-G2/TC-G5 are parked with test.fixme until the app is fixed.
