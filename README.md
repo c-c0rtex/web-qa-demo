@@ -42,7 +42,7 @@ Pointing the pipeline at a well-maintained open-source stack surfaced, in one af
 | [`.web-qa/history.json`](.web-qa/history.json) | The flaky-tracking data behind the 🔁 markers — pass/fail history per test over a 5-run window |
 | [`sample-reports/junit.xml`](sample-reports/junit.xml) | The same matrix as JUnit XML (`web-qa-matrix --junit`) — drop it into any CI's test-report ingestion |
 
-<details>
+<details open>
 <summary><b>junit.xml</b> — the deploy gate in a format every CI understands (click to expand)</summary>
 
 ```xml
