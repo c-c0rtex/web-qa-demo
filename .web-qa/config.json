@@ -38,5 +38,6 @@
         "home page"
       ]
     }
-  ]
+  ],
+  "workers": 1
 }

@@ -75,11 +75,11 @@ web-qa-doctor    --alias realworld-demo
 web-qa-explore   --alias realworld-demo            # crawl + static route mining
 web-qa-generate  --alias realworld-demo --task "Article lifecycle: ..."
 web-qa-spec-gen  --alias realworld-demo            # TCs → validated Playwright specs
-WEBQA_WORKERS=1 web-qa-matrix --alias realworld-demo --roles reader --viewports desktop,mobile
+web-qa-matrix --alias realworld-demo --roles reader --viewports desktop,mobile
 ```
 
-`WEBQA_WORKERS=1` because the whole stand shares one small backend — parallel chromiums
-turn timing into noise.
+The committed config pins `"workers": 1` — the whole stand shares one small backend,
+and parallel chromiums turn timing into noise.
 
 ## Third-party
 
