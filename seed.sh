@@ -10,6 +10,13 @@ curl -sf -X POST "$B/users" -H 'Content-Type: application/json' \
 curl -sf -X POST "$B/users" -H 'Content-Type: application/json' \
   -d '{"user":{"username":"qa-reader","email":"qa-reader@example.com","password":"webqa-demo-1"}}' >/dev/null || true
 
+# Idempotent: as a fixture_cmd this runs before every matrix — don't pile up articles
+COUNT=$(curl -sf "$B/articles" | python3 -c 'import json,sys; print(json.load(sys.stdin)["articlesCount"])' || echo 0)
+if [ "$COUNT" -ge 3 ]; then
+  echo "seed: $COUNT articles already present, skipping"
+  exit 0
+fi
+
 TOKEN=$(curl -sf -X POST "$B/users/login" -H 'Content-Type: application/json' \
   -d '{"user":{"email":"qa-author@example.com","password":"webqa-demo-1"}}' | python3 -c 'import json,sys; print(json.load(sys.stdin)["user"]["token"])')
 

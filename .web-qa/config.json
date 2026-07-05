@@ -39,5 +39,6 @@
       ]
     }
   ],
-  "workers": 1
+  "workers": 1,
+  "fixture_cmd": "./seed.sh"
 }

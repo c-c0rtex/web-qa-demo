@@ -9,5 +9,6 @@
   comments — and the comment form then POSTs to the STALE article's slug: the comment
   lands on the wrong entity (screenshots: sample-reports/findings/mobile-comment-*.png —
   after reload the misdirected comment sits under the stale article). Originally observed
-  as 'posted comment not rendered' and 'new article heading not visible'; both are this
-  one bug. Specs TC-G2/TC-G5 are parked with test.fixme until the app is fixed.
+  as 'posted comment not rendered' and 'new article heading not visible'; the favorite
+  button intermittently keeping its un-favorited class after a successful toggle is the
+  same gap. All are this one bug. Specs TC-G2/TC-G5 are parked with test.fixme until the app is fixed.
