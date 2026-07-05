@@ -1,0 +1,4 @@
+# web-qa runtime artifacts (keep app.context.md, scenarios/, baseline/ in git)
+reports/
+fixtures/.cache/
+*.tmp

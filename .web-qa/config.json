@@ -1,0 +1,42 @@
+{
+  "stack": "React 19 SPA (RealWorld/Conduit) + FastAPI backend",
+  "frontend_dir": "apps/frontend",
+  "backend_prefixes": [
+    "/api"
+  ],
+  "auth_login_path": "/api/users/login",
+  "auth_login_body": {
+    "user": {
+      "email": "{email}",
+      "password": "{password}"
+    }
+  },
+  "auth_token_field": "user.token",
+  "auth_browser_storage": {
+    "kind": "localStorage",
+    "key": "realworld-auth-token",
+    "value": "{token}"
+  },
+  "auth_login_hint": "POST {backend}/api/users/login with JSON {\"user\": {\"email\", \"password\"}} returns the JWT at user.token in the response body. The SPA reads it from localStorage key 'realworld-auth-token' — set it via context.addInitScript/storageState BEFORE page.goto. API requests use header 'Authorization: Token <jwt>' (Token prefix, not Bearer).",
+  "test_data_prefix": "QA-",
+  "viewports": [
+    {
+      "name": "desktop",
+      "width": 1280,
+      "height": 900
+    },
+    {
+      "name": "mobile",
+      "device": "Pixel 7"
+    }
+  ],
+  "route_hints": [
+    {
+      "path": "/",
+      "keywords": [
+        "global feed",
+        "home page"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+# upstream apps are fetched by setup.sh at pinned SHAs — not vendored
+apps/
+
+# web-qa runtime artifacts (committed: app.context.md, scenarios/, specs/, seed.spec.ts,
+# baseline/, BUGS.md, config.json — everything a reader needs without running anything)
+.web-qa/node_modules/
+.web-qa/reports/
+.web-qa/test-results/
+.web-qa/fixtures/
+.web-qa/history.json
+.web-qa/package-lock.json

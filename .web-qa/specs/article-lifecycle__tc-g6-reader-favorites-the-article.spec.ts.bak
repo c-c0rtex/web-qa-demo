@@ -1,0 +1,72 @@
+import { test, expect } from '@playwright/test';
+
+const API = 'http://127.0.0.1:8080/api';
+const APP = 'http://127.0.0.1:30401';
+const READER = { email: 'qa-reader@example.com', password: 'webqa-demo-1' };
+const AUTHOR = { email: 'qa-author@example.com', password: 'webqa-demo-1' };
+
+async function apiLogin(request: any, email: string, password: string): Promise<string> {
+  const res = await request.post(`${API}/users/login`, {
+    data: { user: { email, password } },
+  });
+  expect(res.ok()).toBeTruthy();
+  const body = await res.json();
+  return body.user.token; // RealWorld: JWT lives at user.token
+}
+
+test('TC-G6: reader favorites an article and the state persists on reload', async ({ page, request }) => {
+  const authorToken = await apiLogin(request, AUTHOR.email, AUTHOR.password);
+
+  const createRes = await request.post(`${API}/articles`, {
+    headers: { Authorization: `Token ${authorToken}` },
+    data: {
+      article: {
+        title: `QA-TC-G6-favorite-${Date.now()}`,
+        description: 'QA seed article for favorite test',
+        body: 'Body content for the QA-G6 favorite test article.',
+        tagList: ['qa'],
+      },
+    },
+  });
+  expect(createRes.ok()).toBeTruthy();
+  const created = await createRes.json();
+  const slug = created.article.slug as string;
+
+  try {
+    const readerToken = await apiLogin(request, READER.email, READER.password);
+    // Plant the reader's token before any app code runs — the SPA reads it on boot.
+    await page.addInitScript((t) => {
+      window.localStorage.setItem('realworld-auth-token', t);
+    }, readerToken);
+
+    await page.goto(`${APP}/article/${slug}`, { waitUntil: 'domcontentloaded' });
+
+    // MAINT: the button's accessible name comes from aria-label ("Favorite article" /
+    // "Unfavorite article"), not the visible "Favorite Post" text — case-insensitive match
+    // on the real label; "Unfavorite article" also contains this substring, so the same
+    // locator keeps matching after the toggle and after reload.
+    const favoriteButton = page.getByRole('button', { name: /favorite article/i });
+    await expect(favoriteButton).toBeVisible();
+
+    const beforeText = (await favoriteButton.textContent()) ?? '';
+    const beforeMatch = beforeText.match(/(\d+)/);
+    const beforeCount = beforeMatch ? parseInt(beforeMatch[1], 10) : 0;
+
+    await favoriteButton.click();
+
+    // Favorited state: RealWorld's convention swaps the outline button for the solid/primary variant.
+    await expect(favoriteButton).toHaveClass(/btn-primary/);
+    await expect(favoriteButton).toContainText(String(beforeCount + 1));
+
+    await page.reload({ waitUntil: 'domcontentloaded' });
+
+    const favoriteButtonAfterReload = page.getByRole('button', { name: /favorite article/i });
+    await expect(favoriteButtonAfterReload).toBeVisible();
+    await expect(favoriteButtonAfterReload).toHaveClass(/btn-primary/);
+    await expect(favoriteButtonAfterReload).toContainText(String(beforeCount + 1));
+  } finally {
+    await request.delete(`${API}/articles/${slug}`, {
+      headers: { Authorization: `Token ${authorToken}` },
+    });
+  }
+});
