@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="web-qa-matrix" tests="18" failures="0">
+  <testsuite name="realworld-demo 20260705-164534" tests="18" failures="0" skipped="9">
+    <testcase name="article-lifecycle.md::TC-G1::reader::desktop"/>
+    <testcase name="article-lifecycle.md::TC-G2::reader::desktop"><skipped message="manual"/></testcase>
+    <testcase name="article-lifecycle.md::TC-G3::reader::desktop"/>
+    <testcase name="article-lifecycle.md::TC-G4::reader::desktop"/>
+    <testcase name="article-lifecycle.md::TC-G5::reader::desktop"><skipped message="manual"/></testcase>
+    <testcase name="article-lifecycle.md::TC-G6::reader::desktop"><skipped message="manual"/></testcase>
+    <testcase name="article-lifecycle.md::TC-G7::reader::desktop"><skipped message="manual"/></testcase>
+    <testcase name="article-lifecycle.md::TC-G1::reader::mobile"/>
+    <testcase name="article-lifecycle.md::TC-G2::reader::mobile"><skipped message="manual"/></testcase>
+    <testcase name="article-lifecycle.md::TC-G3::reader::mobile"/>
+    <testcase name="article-lifecycle.md::TC-G4::reader::mobile"/>
+    <testcase name="article-lifecycle.md::TC-G5::reader::mobile"><skipped message="manual"/></testcase>
+    <testcase name="article-lifecycle.md::TC-G6::reader::mobile"><skipped message="manual"/></testcase>
+    <testcase name="article-lifecycle.md::TC-G7::reader::mobile"><skipped message="manual"/></testcase>
+    <testcase name="article-lifecycle__tc-g2-create-a-new-article-via-the-editor.spec.ts"/>
+    <testcase name="article-lifecycle__tc-g5-reader-adds-a-comment-on-the-article.spec.ts"><skipped message="skip"/></testcase>
+    <testcase name="article-lifecycle__tc-g6-reader-favorites-the-article.spec.ts"/>
+    <testcase name="article-lifecycle__tc-g7-author-deletes-the-article.spec.ts"/>
+  </testsuite>
+</testsuites>

@@ -40,6 +40,42 @@ Pointing the pipeline at a well-maintained open-source stack surfaced, in one af
 | [`.web-qa/BUGS.md`](.web-qa/BUGS.md) | Findings ledger — bugs stay here until the app is fixed, they don't get "fixed" in the tests |
 | [`sample-reports/findings/`](sample-reports/findings/) | Evidence for the findings: the stale-render bug caught on camera (`after-post` — the URL points at a fresh article, but a previously-viewed one is rendered; `after-reload` — the posted comment sits under the WRONG article) and the raw axe-core report with all 12 `color-contrast` nodes |
 | [`.web-qa/history.json`](.web-qa/history.json) | The flaky-tracking data behind the 🔁 markers — pass/fail history per test over a 5-run window |
+| [`sample-reports/junit.xml`](sample-reports/junit.xml) | The same matrix as JUnit XML (`web-qa-matrix --junit`) — drop it into any CI's test-report ingestion |
+
+<details>
+<summary><b>junit.xml</b> — the deploy gate in a format every CI understands (click to expand)</summary>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="web-qa-matrix" tests="18" failures="0">
+  <testsuite name="realworld-demo 20260705-164534" tests="18" failures="0" skipped="9">
+    <testcase name="article-lifecycle.md::TC-G1::reader::desktop"/>
+    <testcase name="article-lifecycle.md::TC-G2::reader::desktop"><skipped message="manual"/></testcase>
+    <testcase name="article-lifecycle.md::TC-G3::reader::desktop"/>
+    <testcase name="article-lifecycle.md::TC-G4::reader::desktop"/>
+    <testcase name="article-lifecycle.md::TC-G5::reader::desktop"><skipped message="manual"/></testcase>
+    <testcase name="article-lifecycle.md::TC-G6::reader::desktop"><skipped message="manual"/></testcase>
+    <testcase name="article-lifecycle.md::TC-G7::reader::desktop"><skipped message="manual"/></testcase>
+    <testcase name="article-lifecycle.md::TC-G1::reader::mobile"/>
+    <testcase name="article-lifecycle.md::TC-G2::reader::mobile"><skipped message="manual"/></testcase>
+    <testcase name="article-lifecycle.md::TC-G3::reader::mobile"/>
+    <testcase name="article-lifecycle.md::TC-G4::reader::mobile"/>
+    <testcase name="article-lifecycle.md::TC-G5::reader::mobile"><skipped message="manual"/></testcase>
+    <testcase name="article-lifecycle.md::TC-G6::reader::mobile"><skipped message="manual"/></testcase>
+    <testcase name="article-lifecycle.md::TC-G7::reader::mobile"><skipped message="manual"/></testcase>
+    <testcase name="article-lifecycle__tc-g2-create-a-new-article-via-the-editor.spec.ts"/>
+    <testcase name="article-lifecycle__tc-g5-reader-adds-a-comment-on-the-article.spec.ts"><skipped message="skip"/></testcase>
+    <testcase name="article-lifecycle__tc-g6-reader-favorites-the-article.spec.ts"/>
+    <testcase name="article-lifecycle__tc-g7-author-deletes-the-article.spec.ts"/>
+  </testsuite>
+</testsuites>
+```
+
+Every matrix row becomes a `<testcase>` named `file::TC::role::viewport`; mutating TCs
+executed by specs show as `skipped` in the passive rows, the specs themselves carry the
+verdict. Inside GitHub Actions the human-readable matrix also lands on the run page
+automatically via `$GITHUB_STEP_SUMMARY`.
+</details>
 
 The auth contract is declared, not hardcoded, in [`.web-qa/config.json`](.web-qa/config.json):
 
