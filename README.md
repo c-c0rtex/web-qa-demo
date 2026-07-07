@@ -1,6 +1,6 @@
 # web-qa-demo — autonomous QA on a real open-source app
 
-[web-qa](https://github.com/c-c0rtex/web-qa) pointed at a real
+[web-qa](https://codeberg.org/c-c0rtex/web-qa) pointed at a real
 [RealWorld/Conduit](https://github.com/gothinkster/realworld) stack — a React 19 SPA
 ([realworld-react-fsd](https://github.com/yurisldk/realworld-react-fsd)) on a FastAPI
 backend ([fastapi-realworld-backend](https://github.com/borys25ol/fastapi-realworld-backend)) —
@@ -89,7 +89,7 @@ The auth contract is declared, not hardcoded, in [`.web-qa/config.json`](.web-qa
 ## Run it yourself
 
 Requirements: git, docker, [uv](https://docs.astral.sh/uv/), Node 20+, yarn,
-[web-qa](https://github.com/c-c0rtex/web-qa) (`/plugin marketplace add c-c0rtex/web-qa`).
+[web-qa](https://codeberg.org/c-c0rtex/web-qa) (`/plugin marketplace add c-c0rtex/web-qa`).
 
 ```bash
 ./setup.sh        # clone upstream apps (pinned SHAs), patch, install, migrate, build
@@ -130,4 +130,4 @@ Upstream apps are fetched by `setup.sh` at pinned commits and are **not** vendor
 
 ## License
 
-[MIT](https://github.com/c-c0rtex/web-qa/blob/main/LICENSE) © [c-c0rtex](https://github.com/c-c0rtex)
+[MIT](https://codeberg.org/c-c0rtex/web-qa/blob/main/LICENSE) © [c-c0rtex](https://codeberg.org/c-c0rtex)

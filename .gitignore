@@ -7,3 +7,4 @@ apps/
 .web-qa/reports/
 .web-qa/test-results/
 .web-qa/fixtures/
+.claude/
